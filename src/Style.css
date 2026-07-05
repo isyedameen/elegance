@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "@fontsource/outfit";
+@import "@fontsource/plus-jakarta-sans";
+@import "@fontsource/inter";
+
+@theme {
+  --color-brand-background: var(--brand-background);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-text-primary: var(--brand-text-primary);
+  --color-brand-text-secondary: var(--brand-text-secondary);
+  --color-brand-success: var(--brand-success);
+  --color-brand-warning: var(--brand-warning);
+  --color-brand-error: var(--brand-error);
+  --color-brand-border: var(--brand-border);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+}
+
+@layer base {
+  :root {
+    --brand-background: #F8FAFC;   /* Slate 50 - Clean, crisp off-white */
+    --brand-surface: #FFFFFF;      /* Pure White */
+    --brand-primary: #4F46E5;      /* Indigo 600 - Highly energetic, professional CTA color */
+    --brand-primary-hover: #4338CA; /* Indigo 700 - Hover state */
+    --brand-secondary: #EEF2FF;    /* Indigo 50 - Tinted background for active states */
+    --brand-accent: #4F46E5;       /* Indigo 600 - Unified accent to match primary CTAs */
+    --brand-text-primary: #0F172A; /* Slate 900 - Dark crisp text, not pure black */
+    --brand-text-secondary: #64748B; /* Slate 500 */
+    --brand-border: #E2E8F0;       /* Slate 200 */
+    
+    /* Premium Tinted Status Colors */
+    --brand-success: #10B981;      /* Emerald 500 */
+    --brand-success-bg: #ECFDF5;   /* Emerald 50 */
+    --brand-warning: #F59E0B;      /* Amber 500 */
+    --brand-warning-bg: #FFFBEB;   /* Amber 50 */
+    --brand-error: #EF4444;        /* Red 500 */
+    --brand-error-bg: #FEF2F2;     /* Red 50 */
+  }
+
+  html {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--brand-background);
+    color: var(--brand-text-primary);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Custom Premium Utilities */
+@layer components {
+  /* Cloud Shadows - A hallmark of premium bespoke design */
+  .shadow-premium {
+    box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--brand-border);
+  }
+  .shadow-premium-hover {
+    box-shadow: 0 20px 40px -8px rgba(79, 70, 229, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  /* Tinted Badges */
+  .badge-success {
+    @apply bg-[var(--brand-success-bg)] text-[var(--brand-success)] font-semibold px-2.5 py-1 rounded-md text-xs border border-[var(--brand-success)]/20;
+  }
+  .badge-warning {
+    @apply bg-[var(--brand-warning-bg)] text-[var(--brand-warning)] font-semibold px-2.5 py-1 rounded-md text-xs border border-[var(--brand-warning)]/20;
+  }
+  .badge-error {
+    @apply bg-[var(--brand-error-bg)] text-[var(--brand-error)] font-semibold px-2.5 py-1 rounded-md text-xs border border-[var(--brand-error)]/20;
+  }
+  .badge-accent {
+    @apply bg-brand-secondary text-brand-accent font-semibold px-2.5 py-1 rounded-md text-xs border border-brand-accent/20;
+  }
+
+  .input-base {
+    @apply w-full px-4 py-3 bg-brand-surface border border-brand-border rounded-xl text-[16px] text-brand-text-primary outline-none transition-all;
+  }
+  .input-base:focus {
+    @apply border-brand-accent ring-2 ring-brand-accent ring-offset-1;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-primary text-white rounded-xl font-medium px-6 py-3 transition-all active:scale-95 hover:bg-brand-primary-hover;
+    box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 20px 40px -8px rgba(79, 70, 229, 0.12), 0 8px 16px -4px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+  }
+  .btn-secondary {
+    @apply bg-transparent border border-brand-border text-brand-text-primary rounded-xl font-medium px-6 py-3 transition-colors hover:bg-brand-surface;
+  }
+}
