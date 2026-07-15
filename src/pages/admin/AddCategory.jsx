@@ -50,7 +50,7 @@ function AddCategory() {
           type="submit"
           className="btn-primary w-full mt-5 text-lg"
         >
-          Add Category
+          Add Category cheyy
         </button>
       </form>
     </div>
