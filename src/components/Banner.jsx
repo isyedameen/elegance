@@ -23,7 +23,7 @@ function Banner({ products, banners, loading, sort, setSort, setPage }) {
       {activeBanners.length > 0 && (
         <div className="w-full py-6 md:py-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="w-full relative overflow-hidden rounded-[2rem] md:rounded-[3rem] bg-brand-surface shadow-premium h-[400px] md:h-[500px]">
+            <div className="w-full relative overflow-hidden rounded-[2rem] md:rounded-[3rem] bg-brand-surface shadow-premium min-h-[450px] md:h-[500px]">
               
               <div
                 className="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
@@ -62,7 +62,7 @@ function Banner({ products, banners, loading, sort, setSort, setPage }) {
                       )}
 
                       <Link to={banner.link || (banner.product ? `/ProductPage/${banner.product._id}` : "/")}>
-                        <button className="mt-4 px-8 py-3.5 bg-brand-primary text-[#FFFFFF] rounded-xl font-bold hover:brightness-110 transition active:scale-[0.98] flex items-center justify-center gap-2 shadow-premium">
+                        <button className="mt-4 px-6 py-3 md:px-8 md:py-3.5 bg-brand-primary text-[#FFFFFF] rounded-xl font-bold hover:brightness-110 transition active:scale-[0.98] flex items-center justify-center gap-2 shadow-premium">
                           Shop Now <ArrowRight size={18} />
                         </button>
                       </Link>

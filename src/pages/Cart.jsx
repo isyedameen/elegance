@@ -91,7 +91,7 @@ function Cart() {
                 {cart.map((item, index) => (
                   <div key={`${item._id}-${index}`} className="p-6 sm:p-8 border-b border-brand-background last:border-b-0 flex flex-col sm:flex-row gap-6 relative group hover:bg-brand-background transition-colors">
                     
-                    <div className="bg-white rounded-2xl p-4 w-full sm:w-40 h-40 flex-shrink-0 flex items-center justify-center shadow-premium">
+                    <div className="bg-white rounded-2xl p-4 w-28 h-28 sm:w-40 sm:h-40 flex-shrink-0 flex items-center justify-center shadow-premium mx-auto sm:mx-0">
                       <Link to={`/ProductPage/${item._id}`}>
                         <img src={item.imageURL} alt={item.name} className="max-w-full max-h-full object-contain hover:scale-105 transition-transform" />
                       </Link>

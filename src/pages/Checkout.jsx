@@ -126,17 +126,17 @@ function Checkout() {
             <div className="w-8 h-8 rounded-full badge-success flex items-center justify-center font-bold shadow-premium">
               <Check size={16} />
             </div>
-            <span className="ml-2 font-semibold text-brand-text-primary text-sm">Cart</span>
+            <span className="ml-2 font-semibold text-brand-text-primary text-xs md:text-sm">Cart</span>
           </div>
           <div className="w-16 md:w-32 h-1 bg-brand-success mx-2"></div>
           <div className="flex items-center">
             <div className="w-8 h-8 rounded-full bg-brand-primary text-[#FFFFFF] flex items-center justify-center font-bold shadow-premium">2</div>
-            <span className="ml-2 font-bold text-brand-text-primary text-sm">Checkout</span>
+            <span className="ml-2 font-bold text-brand-text-primary text-xs md:text-sm">Checkout</span>
           </div>
           <div className="w-16 md:w-32 h-1 bg-gray-200 mx-2"></div>
           <div className="flex items-center opacity-50">
             <div className="w-8 h-8 rounded-full bg-gray-200 text-brand-text-secondary flex items-center justify-center font-bold">3</div>
-            <span className="ml-2 font-medium text-brand-text-secondary text-sm">Payment</span>
+            <span className="ml-2 font-medium text-brand-text-secondary text-xs md:text-sm">Payment</span>
           </div>
         </div>
 

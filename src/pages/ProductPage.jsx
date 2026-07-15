@@ -207,7 +207,7 @@ function ProductPage() {
             <span>›</span>
             <span className="hover:text-brand-text-primary capitalize cursor-pointer transition">{details.category?.category || "Products"}</span>
             <span>›</span>
-            <span className="text-brand-text-primary truncate w-48 md:w-auto">{details.name}</span>
+            <span className="text-brand-text-primary truncate max-w-[120px] sm:max-w-xs md:max-w-none">{details.name}</span>
           </nav>
         </div>
       </div>
@@ -218,7 +218,7 @@ function ProductPage() {
           {/* LEFT: IMAGE GALLERY */}
           <div className="lg:col-span-7">
             <div className="sticky top-24">
-              <div className="bg-white rounded-3xl p-12 flex items-center justify-center relative overflow-hidden group min-h-[300px] md:min-h-[400px] lg:min-h-[500px] shadow-premium">
+              <div className="bg-white rounded-3xl p-8 md:p-12 flex items-center justify-center relative overflow-hidden group min-h-[250px] md:min-h-[400px] lg:min-h-[500px] shadow-premium">
                 {/* Actions */}
                 <div className="absolute top-6 right-6 flex flex-col gap-4 z-10">
                   <button

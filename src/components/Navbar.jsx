@@ -242,7 +242,7 @@ function Navbar() {
           </button>
         </div>
         {result.length > 0 && (
-            <div className="absolute w-[calc(100%-2rem)] mx-4 bg-brand-surface text-brand-text-primary shadow-xl rounded-xl mt-1 z-50 max-h-60 overflow-y-auto border border-brand-border">
+            <div className="absolute left-4 right-4 bg-brand-surface text-brand-text-primary shadow-xl rounded-xl mt-1 z-50 max-h-60 overflow-y-auto border border-brand-border">
               {result.map((item) => (
                 <Link
                   key={item._id}
